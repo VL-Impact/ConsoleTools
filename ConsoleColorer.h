@@ -8,7 +8,6 @@
 /**
  * Usage: cout << Colored(Red) << "Red Warning Text! " << Colored(Yellow) << "Lemons!";
  *        cout << "This text is normal again!";
- *        cout << Colored(BackgroundColor(Gray) | FontColor(Blue)) << "This is blue text on gray background!";
  */
 
 namespace Colorer
@@ -21,8 +20,8 @@ namespace Colorer
         DarkRed,
         DarkMagenta,
         DarkYellow,Olive=DarkYellow,
-        Grey,
-        DarkGrey,
+        Grey,Gray=Grey,
+        DarkGrey,DarkGray=DarkGrey,
         Blue,
         Green,
         Cyan,
@@ -41,8 +40,8 @@ namespace Colorer
         BgDarkRed = DarkRed << 4,
         BgDarkMagenta = DarkMagenta << 4,
         BgDarkYellow = DarkYellow << 4, BgOlive=BgDarkYellow,
-        BgGrey = Grey << 4,
-        BgDarkGrey = DarkGrey << 4,
+        BgGrey = Grey << 4, BgGray=BgGrey,
+        BgDarkGrey = DarkGrey << 4, BgDarkGray=BgDarkGrey,
         BgBlue = Blue << 4,
         BgGreen = Green << 4,
         BgCyan = Cyan << 4,
@@ -94,7 +93,7 @@ namespace Colorer
         WORD color_;     
     };
 
-    inline void PrintDemoPalette() {
+    void PrintDemoPalette() {
         using namespace std;
         cout<< "Font Colors: \n";
         cout<< "0:\t" << Colored(BackgroundColor(Black))		<< "  "<< Colored(Black)		<< " Black"<<endl;
