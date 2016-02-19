@@ -4,7 +4,7 @@ Helpful utilities for pleasant development
 - ConsoleColorer 
 ![ConsoleColorer Demo](/ColorsDemo.png)
  - Usage: 
-```
+```C++
 	using namespace std;
 	using namespace Colorer;
 	
